@@ -72,3 +72,37 @@ img {
     border-radius: 50%;
     margin-top: 2rem;
 }
+
+.buttons {
+    position: absolute;
+    left: 75%;
+    bottom: -2rem;
+    height: 3.5rem;
+    width: 9rem;
+    border: 2px solid var(--color-orange);
+    border-radius: 50px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.next,
+.prev {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+.next:hover,
+.prev:hover {
+    background-color: antiquewhite;
+}
