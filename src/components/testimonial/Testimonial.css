@@ -30,6 +30,41 @@ section.main {
     top: -3rem;
 }
 
+.slide {
+    width: 100%;
+    display: none; /* hides content of slide div */
+    transform: translateX(3rem); /* push it to the right side */
+    animation: slide 0.5s forwards;
+}
+
+.current {
+    display: flex; /* shows current slide */
+}
+
+@keyframes slide {
+    /* create slide in from the right side */
+    to {
+        transform: translateX(0);
+    }
+}
+
+.text {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+/* create text underline */
+.text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 1px;
+    width: 25%;
+    background-color: var(--color-orange);
+    transform: translateX(-50%); /* centers it */
+}
+
 img {
     width: 6rem;
     height: 6rem;

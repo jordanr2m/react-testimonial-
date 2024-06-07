@@ -21,8 +21,7 @@ const Slider = () => {
                 {/* If index = current slide, then show it */}
                 {index === currentSlide && (
                   <div>
-                    <p>{user.desc}</p>
-                    <hr />
+                    <p className='text'>{user.desc}</p>
                     <img src={user.img} alt="profile" />
                     <h4>{user.name}</h4>
                     <p className='--fw-thin'>{user.job}</p>
