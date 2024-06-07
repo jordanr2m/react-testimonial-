@@ -28,19 +28,19 @@ const Slider = () => {
                     <p className='--fw-thin'>{user.job}</p>
                   </div>
                 )}
-
-                <div className='buttons'>
-                  <AiOutlineArrowLeft size={15} className='prev' />
-                  <AiOutlineArrowRight size={15} className='next' />
-                </div>
-
               </div>
-            )
+            );
           })}
+
+          <div className='buttons'>
+            <AiOutlineArrowLeft size={15} className='prev' />
+            <AiOutlineArrowRight size={15} className='next' />
+          </div>
+
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Slider
