@@ -19,8 +19,7 @@ const Slider = () => {
   useEffect(() => {
     // Set slide to 0 on page load
     setCurrentSlide(0);
-    console.log(slideLength); // 2
-  })
+  }, []); // set dependency to empty array so it only runs on page load, not each time the slide is changed
 
   return (
     <section className='main --flex-center'>
