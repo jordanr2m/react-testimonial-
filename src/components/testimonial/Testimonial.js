@@ -8,6 +8,14 @@ const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideLength = users.length;
 
+  const nextSlide = () => {
+    setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1)
+  }
+
   useEffect(() => {
     // Set slide to 0 on page load
     setCurrentSlide(0);
@@ -39,8 +47,8 @@ const Slider = () => {
           })}
 
           <div className='buttons'>
-            <AiOutlineArrowLeft size={15} className='prev' />
-            <AiOutlineArrowRight size={15} className='next' />
+            <AiOutlineArrowLeft size={15} className='prev' onClick={prevSlide} />
+            <AiOutlineArrowRight size={15} className='next' onClick={nextSlide} />
           </div>
 
         </div>
