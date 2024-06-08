@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./Testimonial.css";
 import { FaQuoteLeft } from "react-icons/fa";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
@@ -6,6 +6,13 @@ import { users } from './data';
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const slideLength = users.length;
+
+  useEffect(() => {
+    // Set slide to 0 on page load
+    setCurrentSlide(0);
+    console.log(slideLength); // 2
+  })
 
   return (
     <section className='main --flex-center'>
